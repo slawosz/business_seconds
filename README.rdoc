@@ -5,7 +5,16 @@ business time (in seconds):
 
   begin = Time.parse("June 11th, 2010, 4:50 pm")
   end   = Time.parse("June 14th, 2010, 9:50 am")
-  begin.business_seconds_to(end)
+  Time.business_seconds_duration_from_to(begin, end)
+
+and helper methods:
+
+  
+  time = Time.parse("June 11th, 2010, 4:50 pm")
+
+  Time.business_seconds_left_to_the_end_of_day(time)
+  Time.business_seconds_from_the_beginning_of_day(time)
+  Time.during_business_hours?(time)
 
 This gem is dependent from bokmann/business_time gem:
 
