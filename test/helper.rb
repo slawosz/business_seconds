@@ -11,10 +11,11 @@ end
 
 require 'test/unit'
 require 'shoulda'
+require 'business_time'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-require 'business_time'
+require 'business_seconds'
 
-class Test::Unit::TestCase
-end
+#class Test::Unit::TestCase
+#end
