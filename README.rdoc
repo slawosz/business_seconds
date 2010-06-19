@@ -1,5 +1,9 @@
 = business_seconds
 
+Instalation:
+
+  gem install business_seconds
+
 This is an extension for bokmann/business_time gem. It adds method to count 
 business time (in seconds):
 
