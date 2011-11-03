@@ -4,7 +4,7 @@ Instalation:
 
   gem install business_seconds
 
-This is an extension for bokmann/business_time gem. It adds method to count 
+This is an extension for bokmann/business_time gem. It adds method to count
 business time (in seconds):
 
   begin = Time.parse("June 11th, 2010, 4:50 pm")
@@ -13,7 +13,7 @@ business time (in seconds):
 
 and helper methods:
 
-  
+
   time = Time.parse("June 11th, 2010, 4:50 pm")
 
   Time.business_seconds_left_to_the_end_of_day(time)

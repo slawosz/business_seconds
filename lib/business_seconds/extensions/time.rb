@@ -1,6 +1,6 @@
 class Time
   class << self
-    
+
     # Checks if time is during business hours
     def during_business_hours?(time)
       workday?(time) && !before_business_hours?(time) && !after_business_hours?(time)

@@ -1,7 +1,7 @@
 require 'helper'
 
 class TestTimeWithZoneExtensions < Test::Unit::TestCase
-  
+
   context "With Eastern Standard Time" do
     setup do
       Time.zone = 'Eastern Time (US & Canada)'
@@ -24,7 +24,7 @@ class TestTimeWithZoneExtensions < Test::Unit::TestCase
         end_time = Time.zone.parse("August 17th, 2010, 18:50 pm")
         expecting = Time.business_seconds_duration_from_to(start_time, end_time)
         assert_equal expecting, 0
-        
+
         start_time = Time.zone.parse("August 22th, 2010, 11:50 am")
         end_time = Time.zone.parse("August 22th, 2010, 13:50 pm")
         expecting = Time.business_seconds_duration_from_to(start_time, end_time)
@@ -35,7 +35,7 @@ class TestTimeWithZoneExtensions < Test::Unit::TestCase
         # weekend day
         start_time = Time.zone.parse("August 22th, 2010, 11:50 am")
         BusinessTime::Config.reset
-        
+
         BusinessTime::Config.holidays << Date.parse("August 24, 2010")
         end_time = Time.zone.parse("August 24th, 2010, 13:50 pm")
         expecting = Time.business_seconds_duration_from_to(start_time, end_time)
@@ -128,7 +128,7 @@ class TestTimeWithZoneExtensions < Test::Unit::TestCase
         end_time = Time.zone.parse("August 17th, 2010, 18:50 pm")
         expecting = Time.business_seconds_duration_from_to(start_time, end_time)
         assert_equal expecting, 0
-        
+
         start_time = Time.zone.parse("August 22th, 2010, 11:50 am")
         end_time = Time.zone.parse("August 22th, 2010, 13:50 pm")
         expecting = Time.business_seconds_duration_from_to(start_time, end_time)
@@ -139,7 +139,7 @@ class TestTimeWithZoneExtensions < Test::Unit::TestCase
         # weekend day
         start_time = Time.zone.parse("August 22th, 2010, 11:50 am")
         BusinessTime::Config.reset
-        
+
         BusinessTime::Config.holidays << Date.parse("August 24, 2010")
         end_time = Time.zone.parse("August 24th, 2010, 13:50 pm")
         expecting = Time.business_seconds_duration_from_to(start_time, end_time)
